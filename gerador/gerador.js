@@ -40,9 +40,9 @@ mais.addEventListener('click', function mais(){
 
 menos.addEventListener('click', function menos(){
     if(valor > 20){
-      valor 
+      valor --;
     }
-    else if(valor < 9){
+    else if(valor <= 8){
       valor ++
     }
     else{

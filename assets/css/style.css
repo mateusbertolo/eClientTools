@@ -15388,11 +15388,11 @@ ul.list-icons li i {
 @media (max-width: 767.98px) {
   .email-table {
     min-width: 500px; } }
-
+/* 
 form label {
   font-weight: 500;
   margin-bottom: 5px;
-  font-size: 15px; }
+  font-size: 15px; } */
 
 .error .form-control {
   border-color: #ef5350; }
@@ -21001,9 +21001,25 @@ html[dir=rtl] [type=radio].material-inputs + label:after, html[dir=rtl] [type=ra
   }
   #quantidadenumeros{
     height: 50px;
+    width: 40%;
+  }
+  #quantidadeletras{
+    height: 40px;
     width: 100%;
   }
-  
+  #quantidadeletrascontainer{
+    height: 40px;
+    width: 50%;
+  }
+  #labelchar{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+  }
+  #form-rows{
+    display: flex;
+    flex-direction: row;
+  }
   #geradorform{
     display: flex;
     flex-direction: column;
@@ -21038,7 +21054,7 @@ html[dir=rtl] [type=radio].material-inputs + label:after, html[dir=rtl] [type=ra
   }
   .form-group{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
   }
   .form-select{
     display: flex;

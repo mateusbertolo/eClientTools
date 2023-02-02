@@ -31,7 +31,7 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <style type="text/css">.jqstooltip { position: absolute;left: 0px;top: 0px;visibility: hidden;background: rgb(0, 0, 0) transparent;background-color: rgba(0,0,0,0.6);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";color: white;font: 10px arial, san serif;text-align: left;white-space: nowrap;padding: 5px;border: 1px solid white;z-index: 10000;}.jqsfield { color: white;font: 10px arial, san serif;text-align: left;}</style></head>
+    <!-- <style type="text/css">.jqstooltip { position: absolute;left: 0px;top: 0px;visibility: hidden;background: rgb(0, 0, 0) transparent;background-color: rgba(0,0,0,0.6);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";color: white;font: 10px arial, san serif;text-align: left;white-space: nowrap;padding: 5px;border: 1px solid white;z-index: 10000;}.jqsfield { color: white;font: 10px arial, san serif;text-align: left;}</style></head> -->
     </head>
     <body>
         <!-- -------------------------------------------------------------- -->
@@ -58,7 +58,7 @@
                     <div class="navbar-header" data-logobg="skin6">
                         <!-- This is for the sidebar toggle which is visible on mobile only -->
                         <a class="nav-toggler waves-effect waves-light d-block d-md-none" href="javascript:void(0)">
-                            <i class="ri-close-line fs-6 ri-menu-2-line"></i>
+                            <i  class="ri-close-line fs-6 ri-menu-2-line" aria-hidden="true"></i>
                         </a>
                         <!-- -------------------------------------------------------------- -->
                         <!-- Logo -->
@@ -253,7 +253,7 @@
                     <nav class="sidebar-nav">
                         <ul id="sidebarnav" class="in">
                             <li class="nav-small-cap">
-                                <i class="mdi mdi-dots-horizontal"></i>
+                                <i class="mdi mdi-dots-horizontal" aria-hidden="true"></i>
                                 <span class="hide-menu">Ferramentas</span>
                             </li>
                             <li class="sidebar-item">
@@ -295,32 +295,40 @@
                             <div class="col-12">
                                 <div class="card">
                                     <div class="card-body">
-                                        <label for="quantidadenumeros">Quantidade de caracteres</label>
+                                        <label for="quantidadenumeros">Tamanho da Senha:</label>
                                         <br>
                                         <form id="geradorform" class="form">
                                            
                                             <div class="form-group">
                                                 <div class="form-select">
-                                                    <input type="range" min="8" max="20" value="10"  class="form-range" id="quantidadeletras">
+                                                   
                                                     <!-- <input type="number" class="form-control" min="8" max="20" value="10" id="quantidadenumeros"> -->
                                                     <div class="input-group bootstrap-touchspin bootstrap-touchspin-injected"><span class="input-group-btn input-group-prepend"><button class="btn btn-primary bootstrap-touchspin-down" id="diminuirQuantidade" type="button">-</button></span><input type="number" class="form-control" min="8" max="20" value="10" id="demo3"><span class="input-group-btn input-group-append"><button class="btn btn-primary bootstrap-touchspin-up" id="aumentaQuantidade" type="button">+</button></span></div>
-                                                </div>
-                                                 
+
+                                                </div><br>
                                             </div>
+                                                <div id="form-rows">
+                                                    <label id="labelchar">Quantidade de caracteres:</label>
+                                                    <div id="quantidadeletrascontainer">
+                                                        <input type="range" min="8" max="20" value="10"  class="form-range" id="quantidadeletras">
+                                                    </div>
+                                                </div>
+                                          
                                                     <div class="multiselecao mt-4">
+                                                        <label>Caracteres utilizados:</label>
                                                         <div class="form-check form-check-inline">
                                                             <input class="form-check-input success check-light-success" type="checkbox" id="incluirmaiusculas" value="option1" >
-                                                            <label class="form-check-label" for="incluirmaiusculas">Incluir Maiúsculas</label>
+                                                            <label class="form-check-label" for="incluirmaiusculas">ABC</label>
                                                         </div>
 
                                                         <div class="form-check form-check-inline">
                                                             <input class="form-check-input success check-light-success" type="checkbox" id="incluirnumeros" value="option1" >
-                                                            <label class="form-check-label" for="incluirnumeros">Incluir Números</label>
+                                                            <label class="form-check-label" for="incluirnumeros">123</label>
                                                         </div>
                                                         
                                                         <div class="form-check form-check-inline">
                                                             <input class="form-check-input success check-light-success" type="checkbox" id="incluirsimbolos" value="option1" >
-                                                            <label class="form-check-label" for="incluirsimbolos">Incluir Símbolos</label>
+                                                            <label class="form-check-label" for="incluirsimbolos">$%!/</label>
                                                         </div>
                                                 </div>
                                             </div> 
@@ -481,7 +489,7 @@
                                 </div>
                             </div>
                             <div class="sl-item">
-                                <div class="sl-left bg-info"><i class="fas fa-image"></i></div>
+                                <div class="sl-left bg-info"><i class="fas fa-image" aria-hidden="true"></i></div>
                                 <div class="sl-right">
                                     <div class="font-weight-medium">Send documents to Clark</div>
                                     <div class="desc">Lorem Ipsum is simply </div>
